@@ -24,8 +24,12 @@ SECRET_KEY = "django-insecure-x)7by)_w3kr5i$eue7e@1zxay$du8b3s3$5#8i2#3jf+0db8y*
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# only when deploying to production set debug to false
+# DEBUG = False
 
 ALLOWED_HOSTS = []
+# only when deploying to production set allowed hosts
+# ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -62,6 +66,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                'blogs.context_processors.get_catagories',
             ],
         },
     },

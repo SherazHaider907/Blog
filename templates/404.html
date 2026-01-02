@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found — 404</title>
+  <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'css/blog.css' %}" rel="stylesheet">
+  <style>
+    body{background:#f8f9fa}
+    .error-box{max-width:680px;margin:8% auto;padding:40px;background:#fff;border-radius:6px;text-align:center}
+    .error-code{font-size:96px;font-weight:700;color:#ffc107}
+    .error-message{font-size:20px;margin-bottom:20px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="error-box shadow-sm">
+      <div class="row">
+        <div class="col-12">
+          <div class="error-code">404</div>
+          <h1 class="error-message">Sorry — the page you are looking for was not found.</h1>
+          <p class="text-muted">The page might have been removed, had its name changed, or is temporarily unavailable.</p>
+          <p>
+            <a class="btn btn-warning" href="/">Go to Home</a>
+            <a class="btn btn-outline-secondary" href="javascript:history.back()">Go Back</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
